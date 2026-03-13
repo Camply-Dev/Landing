@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
-
+import Logo from './loader/logo.vue'
 </script>
 
 <template>
     <nav>
-      <img src="/img/logoAnimated.svg" alt="Camply" class="logo">
+      <Logo class="logo" />
       <div class="nav-links">
         <RouterLink to="/"><Icon icon="fluent:home-20-filled" width="24" height="24" /><h5>Home</h5></RouterLink>
         <RouterLink to="/services"><Icon icon="fluent:box-checkmark-20-filled" width="24" height="24" /><h5>Services</h5></RouterLink>
@@ -16,7 +16,7 @@ import { Icon } from '@iconify/vue'
 
 <style scoped>
 nav {
-    width: 60%;
+    width: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,9 +24,9 @@ nav {
     padding: var(--spacing-md) 0;
 }
 
-nav img {
-    width: 100px;
-    height: 100px;
+nav .logo {
+    width: 80px;
+    height: 80px;
 }
 
 nav .nav-links {

@@ -1,22 +1,28 @@
 <script setup lang="ts">
 import NavBar from './components/navBar.vue'
+import PageLoader from './components/PageLoader.vue'
 </script>
 
 <template>
-  <div>
+  <div class="app">
     <navBar />
-
     <main>
+      <PageLoader />
       <RouterView />
     </main>
   </div>
 </template>
 
 <style scoped>
-main {
+.app {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 </style>
